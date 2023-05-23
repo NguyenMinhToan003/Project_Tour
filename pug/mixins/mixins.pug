@@ -1,0 +1,16 @@
+mixin tour-card(image,title,review,name,text,price)
+    .tour-card 
+      .tour-image 
+        .tour-overlay 
+        img(src=image,alt="tour-card-image")
+      .tour-content 
+        h3.tour-title #{title}
+        .tour-rating 
+          .tour-shape-star 
+            img(srcSet="../image/Shape-star.png 2x",alt="shape-star")
+          span.tour-review #{review}
+          span.tour-name #{name}
+        .tour-text #{text}
+        .tour-button 
+          a.tour-button-add(href="#",target="_plance") Add 
+          a.tour-button-price(href="#",target="_plance")  Price $#{price}

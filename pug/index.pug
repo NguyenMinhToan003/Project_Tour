@@ -1,0 +1,89 @@
+include ./mixins/mixins.pug
+meta(charset="UTF-8")
+meta(http-equiv="X-UA-Compatible", content="IE=edge")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+title Tour
+link(rel="stylesheet", href="../css/main.css")
+link(rel="preconnect", href="https://fonts.googleapis.com")
+link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+link(href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap", rel="stylesheet")
+link(rel="preconnect" href="https://fonts.googleapis.com")
+link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+link(href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet")
+header#header
+  .header-controler 
+    each title in ["Thinks to do","Travel guide","Tour"]
+      input(type="button",name=title,value=title)
+    .header-closed 
+      img(src="../image/icon-x.svg",alt="icon-close")
+.checkbox-rect
+    input#checkbox-rect1(type="checkbox", name="check")
+    label(for="checkbox-rect1") Check one
+main#main
+  section.search 
+    h3.search-title Search location or property
+    form(action="").search-form 
+      input(type="search", placeholder="Search location or property").search-input
+      .search-icon 
+        img(src="../image/search.png", alt="icon-search")
+    each title in ["Show side trips","Show items in my trips"]
+      .search-show
+        input(type="radio" name="show" value=title) 
+        span.search-show-title= title 
+
+
+    form(action="").search-choose-title|Activity type
+     each title in["Hidden Gems","Shopping","Historic Sites","Nightlife","Tours","Outdoors","U Museums","Parks","Tours","Outdoors","U Museums","Parks"]
+      .search-choose
+        input(type="checkbox" name="choose" value=title) 
+        span.search-show-title= title
+  section.tour 
+    .tour-list
+      +tour-card("../image/image1.png","CRU Champagne Bar","4.8 (122 reviews)","Tour","Unique 360 panoramicviews of the amazingBangkok skyline, inspired from the best Champagne listings worldwide.",83)
+      +tour-card("../image/image2.png","Tour with Tong","4.8 (122 reviews)","Tour","Unique 360 panoramicviews of the amazingBangkok skyline, inspired from the best Champagne listings worldwide.",83)
+      +tour-card("../image/image3.png","Wat Saket, Bangkok","4.8 (122 reviews)","Tour","Unique 360 panoramicviews of the amazingBangkok skyline, inspired from the best Champagne listings worldwide.",83)
+      +tour-card("../image/image4.png","Safari World","4.8 (122 reviews)","Tour","Unique 360 panoramicviews of the amazingBangkok skyline, inspired from the best Champagne listings worldwide.",83)
+.explore 
+  a.explore-button(href="/",target="_plance")|Explore All
+footer#footer
+  section.footer-top
+    .footer-left
+      .footer-logo
+        img(srcSet="../image/logo.svg 2x",alt="logo-footer")
+      .footer-text Similarly, a loan taken out to buy a car may be secured by the car. The duration of the loan.
+      form(type="submit").footer-submit 
+        input.footer-input(type="email",placeholder="Enter your email")
+        .footer-icon 
+          img(src="../image/row-left.svg",alt="icon-arow")
+
+    ul.footer-card  Services
+      each item in ["Trip Planner","Tour Planning","Tour Guide","Tour Package","Tour advice"]
+        li.footer-item
+          a(href="#")= item   
+    ul.footer-card  Support
+      each item in ["Account","Legal","Contact","Terms & Condition","Privacy Policy"]
+        li.footer-item
+          a(href="#")= item   
+    ul.footer-card  Business
+      each item in ["Success","About Locato","Blog","Information","Travel Guide"]
+        li.footer-item
+          a(href="#")= item   
+  section.footer-bottom   
+    span.footer-copyright Copyright© 2021 UIHUT LLC. All rights reserved   
+    .footer-national 
+      .footer-icon-fb 
+        a(href="#",target="_plank")
+          img(src="../image/fb.svg",alt="icon")
+      .footer-icon-in 
+        a(href="#",target="_plank")
+          img(src="../image/in.svg",alt="icon")
+      .footer-icon-tw 
+        a(href="#",target="_plank")
+          img(src="../image/tw.svg",alt="icon")
+      .footer-icon-ig 
+        a(href="#",target="_plank")
+          img(src="../image/ig.svg",alt="icon")
+
+
+
+  

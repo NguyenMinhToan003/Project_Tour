@@ -1,0 +1,13 @@
+.explore {
+  margin: 80px auto;
+  max-width: 300px;
+  &-button {
+    padding: 10px 40px;
+    background-color: $primary-color;
+    border-radius: 30px;
+    color: $seconds-color;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.5;
+  }
+}

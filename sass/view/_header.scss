@@ -1,0 +1,34 @@
+.header {
+  &-controler {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+  }
+  &-controler input {
+    width: 10%;
+    padding: 14px 20px;
+    background-color: $gray7;
+    border-radius: 10px;
+    color: $gray3;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.43;
+    transition: background-color 0.25s linear;
+  }
+  &-controler input:hover {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: $primary-color;
+    color: $gray7;
+  }
+  &-closed {
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 5px;
+  }
+}

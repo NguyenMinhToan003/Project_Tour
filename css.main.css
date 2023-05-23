@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #777e90;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.43;
+  background-color: #f3f3f3;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+a,
+button,
+input {
+  border: none;
+  display: block;
+  cursor: pointer;
+}
+
+#main {
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  padding: 0 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 10px auto;
+  gap: 80px;
+}
+
+.tour-list {
+  display: grid;
+  grid-template-columns: 840px;
+  grid-template-rows: 335px 335px 335px 335px;
+  gap: 30px;
+}
+.tour-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #ffffff;
+  border-radius: 0 15px 15px 0;
+}
+.tour-content {
+  padding: 30px 35px;
+}
+.tour-overlay {
+  background-image: linear-gradient(358.93deg, rgba(15, 15, 15, 0.41) 12.67%, rgba(16, 16, 16, 0) 61.76%);
+}
+.tour-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px 0 0 15px;
+}
+.tour-title {
+  color: #000000;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 1.5;
+}
+.tour-text {
+  margin-bottom: 60px;
+}
+.tour-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tour-button-add {
+  width: 96px;
+  height: 38px;
+  border-radius: 20px;
+  padding: 9px 34px;
+  background-color: #3b71fe;
+  color: #ffffff;
+}
+.tour-button-price {
+  color: #353945;
+  border-radius: 8px;
+  background-color: #f4f5f9;
+  padding: 9px 20px;
+}
+.tour-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0 20px 0;
+}
+
+/*# sourceMappingURL=css.main.css.map */
